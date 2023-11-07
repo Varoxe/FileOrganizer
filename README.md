@@ -7,7 +7,8 @@ This script is designed to help organize files in a download folder on a Windows
 
 Python 3.x
 Windows operating system (the script uses Windows-style file paths)
-Installation
+
+<h2>Installation</h2>
 No installation is necessary for the script itself. Simply ensure that Python 3 is installed on your system.
 
 <h2>To use this script, follow these steps:</h2>
