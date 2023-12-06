@@ -1,7 +1,7 @@
 from pathlib import Path
 
 # Path to the folder that needs to be organized
-source_directory = Path("C:")  # Replace with your own path
+downloads_path = Path.home() / "Downloads"
 
 # Mapping from folder name to file extensions
 file_mappings = {
@@ -15,16 +15,16 @@ file_mappings = {
 
 # Create folders if they don't exist
 for folder in file_mappings.keys():
-    folder_path = source_directory / folder
+    folder_path = downloads_path / folder
     folder_path.mkdir(exist_ok=True)  # Create the folder, ignore if it already exists
 
 # Move files to corresponding folders based on their extensions
-for file_path in source_directory.iterdir():
+for file_path in downloads_path.iterdir():
     if file_path.is_file():
         moved = False  # To track if the file was moved
         for folder, extensions in file_mappings.items():
             if file_path.suffix.lower() in extensions:
-                target_path = source_directory / folder / file_path.name
+                target_path = downloads_path / folder / file_path.name
                 if not target_path.exists():
                     file_path.rename(target_path)  # Move the file
                     moved = True  # Mark as moved
