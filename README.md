@@ -1,28 +1,27 @@
-<h1>File Organizer</h1>
+<h1>Downloads Organizer</h1>
 <h2>Description</h2>
 
-This script is designed to help organize files in a download folder on a Windows system. It automatically sorts files into designated folders based on their file extensions.
+This Python script automatically organizes files in your Downloads folder by moving them into designated folders based on their file extensions. It categorizes various file types such as images, videos, documents, programs, music, and compressed files into corresponding folders.
 
 <h2>Requirements</h2>
 
-Python 3.x
-Windows operating system (the script uses Windows-style file paths)
+- Python 3.x
+- Compatible with Windows, macOS, and Linux operating systems.
 
 <h2>Installation</h2>
-No installation is necessary for the script itself. Simply ensure that Python 3 is installed on your system.
+No installation is necessary for the script itself. Python 3 should be installed on your system.
 
-<h2>To use this script, follow these steps:</h2>
+<h2>How to Use:</h2>
 
-Update the source_directory variable in the script to point to the directory you want to organize.
+1. The script is preset to organize the Downloads folder in your user profile.
+2. Customize the file_mappings dictionary in the script to match your preferred organization structure.
 
-Customize the file_mappings dictionary in the script to fit the types of files you want to organize and how you want them organized.
+<h2>Running the Script:</h2>
 
-<h2>Run the script using Python:</h2>
-
-Make sure to run the script in a Python environment where you have the necessary permissions to create folders and move files.
-
-The script will create folders if they don't exist and move files into these folders based on the file extension.
+Execute the script in a Python environment where you have the necessary permissions to create folders and move files. The script automatically creates the required subfolders and moves files into them based on their extensions.
 
 <h2>Troubleshooting</h2>
 
-If files are not being moved, ensure you have the correct file extensions listed in file_mappings. Additionally, check for permissions issues in the target directory.
+- If certain files are not moved, check if their extensions are correctly listed in the file_mappings dictionary.
+- Ensure you have the necessary permissions in the Downloads folder for creating subfolders and moving files.
+- If the script indicates that a file already exists in the target folder, consider renaming or manually moving the file.
